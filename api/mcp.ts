@@ -1,8 +1,8 @@
-export const config = { runtime: "nodejs20.x" };
+export const config = { runtime: "nodejs" };
 
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { initializeFieldConfiguration } from "../src/core/config/field-configuration.js";
-import { initMcpServer } from "../src/main/init-mcp-server.js";
+import { initializeFieldConfiguration } from "../build/main/core/config/field-configuration.js";
+import { initMcpServer } from "../build/main/main/init-mcp-server.js";
 
 function parseBasicAuth(header?: string): { username?: string; password?: string } {
     if (!header || !header.startsWith("Basic ")) return {};
